@@ -32,7 +32,7 @@ function App() {
           Learn React
         </a>
         {users.map((user) => (
-          <p style={{ marginBlock: 1, textAlign: "left" }}>
+          <p key={user.id} style={{ marginBlock: 1, textAlign: "left" }}>
             id: {user.id}, name: {user.name}, email: {user.email}
           </p>
         ))}

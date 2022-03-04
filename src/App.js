@@ -6,13 +6,16 @@ import axios from "axios";
 function App() {
   const [users, setUsers] = useState([]);
 
-  useEffect(async () => {
-    try {
-      const { data } = await axios.get("http://localhost:2022/users");
-      setUsers(data.data);
-    } catch (error) {
-      console.log({ error });
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const { data } = await axios.get("http://localhost:2022/users");
+        setUsers(data.data);
+      } catch (error) {
+        console.log({ error });
+      }
     }
+    fetchData();
   }, []);
 
   return (

@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get("http://localhost:2022/users");
+        const { data } = await axios.get("http://172.105.115.129:2022/users");
         setUsers(data.data);
       } catch (error) {
         console.log({ error });
@@ -22,9 +22,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p>Thank you guys. Good luck further !!!!</p>
         <a
           className="App-link"
           href="https://reactjs.org"
